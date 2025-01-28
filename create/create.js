@@ -121,13 +121,13 @@ async function onEncrypt() {
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
-  const output = `http://localhost:8080/#${encrypted}`;
+  const output = `https://tem-italy.github.io/report-unlocker/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");
 
   // Adjust "Hidden Bookmark" link
-  document.querySelector("#bookmark").href = `http://localhost:8080/hidden/#${encrypted}`;
+  document.querySelector("#bookmark").href = `https://tem-italy.github.io/report-unlocker/hidden/#${encrypted}`;
 
   // Adjust "Open in New Tab" link
   document.querySelector("#open").href = output;
